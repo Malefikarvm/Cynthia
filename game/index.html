@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, minimal-ui=1">
+    <title>Phaser Game</title>
+</head>
+<style>
+    body {margin:0px;}
+</style>
+<body>
+    <div id="game"></div>
+    <script src="assets/phaser/phaser.min.js"></script>
+    <script type="text/javascript">
+        var playState = {
+            init: function () {
+                //Se llama cuando se inicia el estado
+            },
+            preload: function () {
+                //Se cargan Imagenes y archivos de recurso
+            },
+            create: function () {
+                //Se crea el personaje, los enemigos, los sonidos, el fondo del juego, etc
+            },
+            update: function () {
+                //Logica del Juego como los movimientos, las colisiones, el movimiento del personaje, etc
+            },
+            render: function () {
+                //Depurar lo que se renderiza
+                //this.game.debug.body(this.player);
+            },
+            pause: function () {
+                //Cuando el juego es pausado
+            },
+            shutdown: function () {
+                //Cuando se sale del estado
+            }
+        };
+        //(Ancho, Alto, Renderer WebGL/Canvas/Auto, id elemento donde se creara el lienzo del juego)
+        var game = new Phaser.Game(1280, 720, Phaser.AUTO, 'game');
+        //Se pueden crear tantos estados del juego como tu quieras
+        game.state.add('play', playState);
+        //Se inicia un estado del juego
+        game.state.start('play');
+    </script>
+</body>
+
+<script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+</script>
+</html>
