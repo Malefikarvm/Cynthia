@@ -13,13 +13,20 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1280, height: 720, resizable: false})
+  var screenElectron = electron.screen;
+  var mainScreen = screenElectron.getPrimaryDisplay();
+  dimensions = mainScreen.size;
+
+  mainWindow = new BrowserWindow({
+      width: dimensions.width,
+      height: dimensions.height,
+      fullscreen: true
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'game/index.html'),
     protocol: 'file:',
-    slashes: true
   }))
 
   // Open the DevTools.
@@ -32,6 +39,8 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  mainWindow.setFullScreen(true);
 }
 
 // This method will be called when Electron has finished
