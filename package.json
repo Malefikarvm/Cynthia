@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "Cynthia",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A game project with phaser (and electron)",
   "main": "main.js",
   "scripts": {
     "start": "electron ."

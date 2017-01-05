@@ -30,7 +30,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -40,7 +40,7 @@ function createWindow () {
     mainWindow = null
   })
 
-  mainWindow.setFullScreen(true);
+  //mainWindow.setFullScreen(true);
 }
 
 // This method will be called when Electron has finished

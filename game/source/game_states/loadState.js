@@ -31,13 +31,14 @@ function loadState() {
 
             //@Important beyond this point we load all files necesaries for the game itself
             this.game.load.audio('music1', 'audio/Solo-Requiem-Galneryus-Cover.mp3');
+            this.game.load.image('player', 'assets/sprites/batman64px.png', 64, 64);
             this.load.onLoadComplete.add(this.loadComplete, this);
         },
         loadComplete: function () {
             this.ready = true;
         },
         create: function () {
-            console.log('created');
+
         },
         update: function () {
             if (this.ready === true) this.game.state.start('play');

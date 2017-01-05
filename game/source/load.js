@@ -8,7 +8,7 @@ function gameStates() {
     return {
         "playState" : new playState(),
         "bootState" : new bootState(),
-        "loadState" : new loadState()
+        "loadState" : new loadState(),
     };
 }
 
@@ -19,7 +19,7 @@ dimensions = mainScreen.size;
 
 //(width, height, Renderer WebGL/Canvas/Auto, element id where the game canavs will be created)
 var game = new Phaser.Game(dimensions.width, dimensions.height, Phaser.canvas, 'game');
-//Could be created as many game state as desired
+//Could be created as many game states as desired
 var gameStates = gameStates();
 game.state.add('play', gameStates.playState);
 game.state.add('boot', gameStates.bootState);
