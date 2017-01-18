@@ -6,12 +6,11 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/Malefikarvm/Cynthia",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
+    "phaser",
+    "game",
     "demo"
   ],
   "author": "GitHub",
